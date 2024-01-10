@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/hassan308/iac-helm.git'
+    path: myapp-helm-charts/myapp  # Sökväg till din Helm chart i Git-repot
+    targetRevision: HEAD  # Branch eller tagg i ditt Git-repo, HEAD pekar på det senaste i default branch
+    helm:
+      valueFiles:
+        - myapp-dev/values.yaml  # Miljöspecifik dev-values.yaml, relativt från path
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: dev-namespace
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
