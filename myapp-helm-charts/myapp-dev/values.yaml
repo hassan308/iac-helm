@@ -1,4 +1,4 @@
-myapp:
+myapp-dev:
   image:
     repository: localhost:5000/demo-app
     pullPolicy: IfNotPresent
