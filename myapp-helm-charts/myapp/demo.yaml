@@ -11,7 +11,7 @@ spec:
     helm:
       parameters:
         - name: "valuesFile"
-          value: "myapp-helm-charts/myapp-dev/values.yaml"
+          value: "myapp-dev/values.yaml"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
