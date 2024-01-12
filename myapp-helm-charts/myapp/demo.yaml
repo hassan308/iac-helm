@@ -9,9 +9,9 @@ spec:
     path: myapp-helm-charts/myapp
     targetRevision: HEAD
     helm:
-      parameters:
-        - name: "valuesFile"
-          value: "myapp-dev/values.yaml"
+      valueFiles:
+        - myapp-helm-charts/myapp-dev/values.yaml
+        - myapp-dev/values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
