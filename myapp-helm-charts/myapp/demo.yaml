@@ -6,11 +6,11 @@ spec:
   project: default
   source:
     repoURL: "https://github.com/hassan308/iac-helm.git"
-    path: myapp-helm-charts/
+    path: myapp-helm-charts/myapp
     targetRevision: HEAD
     helm:
       valueFiles:
-        - "myapp-dev/values.yaml"
+        - "ica-helm/myapp-helm-charts/myapp-dev/values.yaml"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
