@@ -6,8 +6,11 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/hassan308/iac-helm.git'
-    path: myapp-helm-charts/myapp  # Sökväg till din Helm chart i Git-repot
-    targetRevision: HEAD  # Branch eller tagg i ditt Git-repo, HEAD pekar på det senaste i default branch
+    path: myapp-helm-charts/myapp
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml        # Standard värdefil som alltid finns i en Helm-chart
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: dev-namespace
