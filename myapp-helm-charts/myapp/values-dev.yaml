@@ -1,5 +1,5 @@
 replicaCount: 1
 image:
-  repository:  localhost:5000/demo-app22
+  repository:  localhost:5000/demo-app
   pullPolicy: IfNotPresent
   tag: "latest"  # En specifik version istället för "latest"
