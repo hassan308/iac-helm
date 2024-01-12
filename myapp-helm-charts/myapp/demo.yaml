@@ -7,12 +7,9 @@ spec:
   source:
     repoURL: "https://github.com/hassan308/iac-helm.git"
     path: myapp-helm-charts/myapp
-    targetRevision: HEAD
+    targetRevision: main
     helm:
-      valueFiles: [ "values.yaml" ]   # Lägg till din värdefil här om du har anpassade värden
-      # parameters:                   # Avkommentera och lägg till om du har specifika Helm-parametrar
-      #   - name: someParameter
-      #     value: someValue
+      valuesFile: myapp-dev/values.yaml  # Specifik values-fil för prod-miljön
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
