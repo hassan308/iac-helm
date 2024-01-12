@@ -10,7 +10,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - "ica-helm/myapp-helm-charts/myapp-dev/values.yaml"
+        - "values-dev.yaml"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
