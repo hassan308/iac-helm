@@ -1,6 +1,0 @@
-myapp:
-  image:
-    repository: localhost:5000/demo-app
-    pullPolicy: IfNotPresent
-    # Overrides the image tag whose default is the chart appVersion.
-    tag: "latest"
