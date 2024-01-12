@@ -5,15 +5,17 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/hassan308/iac-helm.git'
+    repoURL: "https://github.com/hassan308/iac-helm.git"
     path: myapp-helm-charts/myapp
     targetRevision: HEAD
     helm:
-      valueFiles:
-        - values.yaml        # Standard värdefil som alltid finns i en Helm-chart
+      valueFiles: [ "values.yaml" ]   # Lägg till din värdefil här om du har anpassade värden
+      # parameters:                   # Avkommentera och lägg till om du har specifika Helm-parametrar
+      #   - name: someParameter
+      #     value: someValue
   destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: dev-namespace
+    server: "https://kubernetes.default.svc"
+    namespace: default
   syncPolicy:
     automated:
       prune: true

@@ -22,14 +22,3 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "1.16.0"
-
-dependencies:
-  - name: myapp-dev
-    version: 0.1.0
-    repository: "file://../myapp-dev"
-  - name: myapp-staging
-    version: 0.1.0
-    repository: "file://../myapp-staging"
-  - name: myapp-prod
-    version: 0.1.0
-    repository: "file://../myapp-prod"
