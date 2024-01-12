@@ -8,6 +8,10 @@ spec:
     repoURL: "https://github.com/hassan308/iac-helm.git"
     path: myapp-helm-charts/myapp
     targetRevision: HEAD
+    helm:
+      parameters:
+        - name: "values"
+          value: "myapp-dev/values.yaml"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
