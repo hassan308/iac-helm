@@ -9,7 +9,9 @@ spec:
     path: myapp-helm-charts/myapp
     targetRevision: main
     helm:
-      valuesFile: myapp-dev/values.yaml  # Specifik values-fil för prod-miljön
+      parameters:
+        - name: valuesFile
+          value: myapp-dev/values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
